@@ -1,0 +1,7 @@
+webdavclient3
+fastapi
+uvicorn
+pdfkit
+pandas
+gradio
+tabulate
