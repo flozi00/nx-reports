@@ -10,7 +10,9 @@ from server.utils.webdavclient import get_client, list_files, list_reports
 import gradio as gr
 
 client = get_client(
-    os.environ.get("Nextcloud_server"), os.environ.get("Nextcloud_user"), os.environ.get("Nextcloud_pw")
+    os.environ.get("Nextcloud_server"),
+    os.environ.get("Nextcloud_user"),
+    os.environ.get("Nextcloud_pw"),
 )
 
 
@@ -38,7 +40,6 @@ def read_customer(customer: str):
     reports = list_reports(client, customer)
 
     result = [report.replace(".json", "") for report in reports]
-    print(result)
     return gr.Dropdown.update(choices=result)
 
 
