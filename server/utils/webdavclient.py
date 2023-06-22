@@ -1,9 +1,7 @@
 from webdav3.client import Client
 from server.utils.timing import timeit
-from functools import cache
 
 
-@cache
 @timeit
 def get_client(url, user, pas):
     options = {
